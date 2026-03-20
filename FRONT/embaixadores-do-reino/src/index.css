@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 220 40% 13%;
+
+    --card: 38 40% 97%;
+    --card-foreground: 220 40% 13%;
+
+    --popover: 40 33% 96%;
+    --popover-foreground: 220 40% 13%;
+
+    --primary: 43 90% 48%;
+    --primary-foreground: 220 40% 13%;
+
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 220 40% 13%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 220 55% 30%;
+    --accent-foreground: 40 33% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 43 90% 48%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 40% 13%;
+    --sidebar-foreground: 40 33% 96%;
+    --sidebar-primary: 43 90% 48%;
+    --sidebar-primary-foreground: 220 40% 13%;
+    --sidebar-accent: 220 35% 20%;
+    --sidebar-accent-foreground: 40 33% 96%;
+    --sidebar-border: 220 30% 22%;
+    --sidebar-ring: 43 90% 48%;
+
+    /* Custom tokens */
+    --gold: 43 90% 48%;
+    --gold-light: 43 80% 70%;
+    --gold-dark: 43 90% 35%;
+    --navy: 220 40% 13%;
+    --navy-light: 220 35% 25%;
+    --cream: 40 33% 96%;
+    --warm-white: 38 40% 97%;
+
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Lora', serif;
+
+    --gradient-royal: linear-gradient(135deg, hsl(43 90% 48%), hsl(43 90% 35%));
+    --gradient-navy: linear-gradient(135deg, hsl(220 40% 13%), hsl(220 35% 25%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 40% 13%) 0%, hsl(220 35% 20%) 50%, hsl(220 30% 28%) 100%);
+
+    --shadow-gold: 0 4px 20px -4px hsl(43 90% 48% / 0.35);
+    --shadow-card: 0 2px 12px -2px hsl(220 40% 13% / 0.08);
+    --shadow-elevated: 0 8px 30px -8px hsl(220 40% 13% / 0.15);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .gradient-royal {
+    background: var(--gradient-royal);
+  }
+  .gradient-navy {
+    background: var(--gradient-navy);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
