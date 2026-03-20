@@ -1,0 +1,32 @@
+info:
+  name: Criar Usuário
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/auth/cadastro
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "Gabriel Machado",
+        "email": "gabriel@test.com",
+        "senha": "123456",
+        "cpf": "123.456.789-00",
+        "dataNascimento": "2000-01-01",
+        "rua": "Rua A",
+        "numero": "123",
+        "bairro": "Centro",
+        "cep": "93300-000",
+        "cidade": "Novo Hamburgo",
+        "estado": "RS",
+        "pais": "Brasil"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

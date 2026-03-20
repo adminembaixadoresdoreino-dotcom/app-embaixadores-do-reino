@@ -1,0 +1,31 @@
+info:
+  name: Criar Campanha
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/api/campanhas
+  body:
+    type: json
+    data: |-
+      {
+        "numeroCampanha": "CAMP-001",
+        "titulo": "Campanha de Oração pela Nação",
+        "descricao": "Unidos em oração pelo Brasil, pedindo paz, conversão e avivamento espiritual.",
+        "tipo": "oracao",
+        "dataInicio": "2026-03-20",
+        "dataFim": "2026-04-20",
+        "ativa": true,
+        "objetivo": "1000 terços rezados",
+        "instrucoes": "Rezar ao menos 1 terço por dia e registrar no sistema.",
+        "unidadeRegistro": "terços",
+        "criadoPor": "11111111-1111-1111-1111-111111111111"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

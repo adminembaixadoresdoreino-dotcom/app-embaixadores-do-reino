@@ -1,0 +1,27 @@
+info:
+  name: Criar Campanha 2
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:8080/api/campanhas
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Campanha Teste",
+        "descricao": "Primeira campanha de teste",
+        "codigo": "TESTE02",
+        "objetivo": 100,
+        "unidade": "ORACOES",
+        "icone": "crown",
+        "ativa": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
